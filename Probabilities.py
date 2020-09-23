@@ -1,29 +1,42 @@
 import math
-def Combinations(total,hands):
-    all_posibilities = float(math.factorial(total) / (math.factorial(hands) * math.factorial(total - hands)))
+
+totalhands = 10518300
+def combinations(n,r):
+    all_posibilities = float(math.factorial(n) / (math.factorial(r) * math.factorial(n - r)))
     return all_posibilities
 
-def Probability(frequency):
-    posibilities = combinations(32,8)
-    return (frequency / posibilities)
-
+def baloot_m():
     
-totalHands = Combinations(32, 8)
-print (totalHands)
-fourHundred = (4/32) * (3/31) * (2/30) * (1/29) 
-print(fourHundred)
-#oneHundredPhotosSun =
-#oneHundredNumbersSun =
-#oneHundredSun = 
-#oneHundredPhotosHokom =
-#oneHundredNumbersHokom =
-#oneHundredSun = 
-fifty = ((Combinations(5, 1) * Combinations(4,1))/ (total) )
-fifty1= Combinations(5,1) * Combinations(4,1)
-print(fifty1)
-print(fifty) 
-sira = ((Combinations(3, 1) * Combinations(4,1))/ (total) )
-sira1= Combinations(3,1) * Combinations(4,1)
-print(sira1)
-print(sira)  
-#baloot = 
+    sira_frequency = combinations(4,1) * combinations(6,1) * combinations(29,5)
+    sira = (sira_frequency / totalhands ) * 100
+    print(sira)
+    
+    fifty_frequency = combinations(4,1) * combinations(5,1) * combinations(28,4)
+    fifty = (fifty_frequency / totalhands ) * 100
+    print(fifty)
+    
+    baloot_frequency = combinations(30, 6)
+    baloot = (baloot_frequency / totalhands ) * 100
+    print(baloot)
+    
+    one_hundred_series_frequency = combinations(4,1) * combinations(4,1) * combinations(27,3)
+    one_hundred_series = (one_hundred_series_frequency / totalhands ) * 100
+    print(one_hundred_series)
+    
+    one_hundred_photos_sun_frequency = combinations(4,1) * combinations(28,4)
+    one_hundred_photos_sun = (one_hundred_photos_sun_frequency / totalhands ) * 100
+    print(one_hundred_photos_sun)
+    
+    one_hundred_photos_hokom_frequency = combinations(5,1) * combinations(28,4)
+    one_hundred_photos_hokom = (one_hundred_photos_hokom_frequency / totalhands ) * 100
+    print(one_hundred_photos_hokom)
+    
+    one_hundred_sun = one_hundred_series + one_hundred_photos_sun
+    print(one_hundred_sun)
+    one_hundred_hokom = one_hundred_series + one_hundred_photos_hokom
+    print(one_hundred_hokom)
+    
+    fourHundred = (4/32) * (3/31) * (2/30) * (1/29) * 100
+    print(fourHundred)
+
+baloot_m()
