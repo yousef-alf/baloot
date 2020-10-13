@@ -17,7 +17,8 @@
 <br/>
 8_ مية متسلسلة 0.44493882091212456
 <br/>
-9_ أربعمية 0.0027808676307007787
+9_ أربعمية 0.1946607341490545
+
 <br/>
 
 This code calculates the probabilities for the card game (baloot)
